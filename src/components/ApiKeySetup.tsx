@@ -1,6 +1,5 @@
 import { ChevronDown, ExternalLink } from "lucide-react";
 import { Section } from "./Section";
-import { Placeholder } from "./Placeholder";
 import { apiKeyFaq } from "../content/faq";
 import {
   CLOUD_PROJECT_URL,
@@ -13,7 +12,6 @@ type Step = {
   body: string;
   href?: string;
   hrefLabel?: string;
-  shotLabel: string;
   tone: string;
 };
 
@@ -23,7 +21,6 @@ const steps: Step[] = [
     body: "Free, takes 30 seconds. Any Google account works — no billing setup needed for YouTube API at the free tier.",
     href: CLOUD_PROJECT_URL,
     hrefLabel: "Open project creation",
-    shotLabel: "New project page",
     tone: "bg-teal/15",
   },
   {
@@ -31,7 +28,6 @@ const steps: Step[] = [
     body: "This is what lets the app fetch video titles and thumbnails on your behalf.",
     href: YOUTUBE_API_LIBRARY_URL,
     hrefLabel: "Open API library page",
-    shotLabel: "Enable API page",
     tone: "bg-butter/25",
   },
   {
@@ -39,7 +35,6 @@ const steps: Step[] = [
     body: 'On the Credentials page, click "+ Create Credentials" at the top and choose "API key". Copy the generated key.',
     href: CREDENTIALS_URL,
     hrefLabel: "Open Credentials page",
-    shotLabel: "Credentials page",
     tone: "bg-lavender/20",
   },
   {
@@ -47,13 +42,11 @@ const steps: Step[] = [
     body: 'Edit the new key. Under "API restrictions" pick "Restrict key" and choose only "YouTube Data API v3". This caps damage if the key ever leaks.',
     href: CREDENTIALS_URL,
     hrefLabel: "Open Credentials page",
-    shotLabel: "Restrictions panel",
     tone: "bg-sage/25",
   },
   {
     title: "Paste it into VideoVault",
     body: 'Open Settings in the app, paste your key, hit "Test key". If it succeeds, you\'re done — start adding videos.',
-    shotLabel: "Settings → API key",
     tone: "bg-coral-soft",
   },
 ];
@@ -71,17 +64,17 @@ export function ApiKeySetup() {
         don't have any).
       </p>
 
-      <ol className="mt-12 space-y-6">
+      <ol className="mt-12 space-y-4">
         {steps.map((s, i) => (
           <li
             key={s.title}
-            className={`grid gap-6 rounded-3xl ${s.tone} p-6 md:grid-cols-[auto_1fr_minmax(0,360px)] md:items-center md:p-8 ring-1 ring-black/5`}
+            className={`flex items-start gap-6 rounded-2xl ${s.tone} p-6 md:p-8 ring-1 ring-black/5`}
           >
-            <div className="grid h-12 w-12 place-items-center rounded-full bg-ink text-cream text-lg font-semibold">
+            <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-ink text-cream text-lg font-semibold">
               {i + 1}
             </div>
-            <div>
-              <h3 className="text-2xl font-semibold tracking-tight text-ink">
+            <div className="min-w-0">
+              <h3 className="text-xl font-semibold tracking-tight text-ink md:text-2xl">
                 {s.title}
               </h3>
               <p className="mt-2 text-lg text-ink-soft">{s.body}</p>
@@ -97,7 +90,6 @@ export function ApiKeySetup() {
                 </a>
               )}
             </div>
-            <Placeholder label={s.shotLabel} w={16} h={10} />
           </li>
         ))}
       </ol>
