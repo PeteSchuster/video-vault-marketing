@@ -1,6 +1,7 @@
 import { Plus, CheckCircle2, Play } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Section } from "./Section";
+import { Screenshot } from "./Screenshot";
 
 type Step = {
   icon: LucideIcon;
@@ -8,6 +9,7 @@ type Step = {
   body: string;
   bg: string;
   iconColor: string;
+  shot: { src: string; alt: string };
 };
 
 const steps: Step[] = [
@@ -17,6 +19,10 @@ const steps: Step[] = [
     body: "Paste a YouTube link, search by title, or import a whole channel or playlist in one tap.",
     bg: "bg-teal/15",
     iconColor: "text-teal",
+    shot: {
+      src: "./screenshots/sources.png",
+      alt: "Sources tab showing an imported Demo channel with library breakdown",
+    },
   },
   {
     icon: CheckCircle2,
@@ -24,6 +30,10 @@ const steps: Step[] = [
     body: "Preview each video, tag it, and approve or reject. Nothing reaches your kid until you say so.",
     bg: "bg-butter/25",
     iconColor: "text-terracotta",
+    shot: {
+      src: "./screenshots/review.png",
+      alt: "Review queue with two videos pending approve or reject",
+    },
   },
   {
     icon: Play,
@@ -31,6 +41,10 @@ const steps: Step[] = [
     body: "Your kid sees a clean home with only what you chose. No suggestions, no comments, no ads.",
     bg: "bg-sage/25",
     iconColor: "text-sage",
+    shot: {
+      src: "./screenshots/kid-home.png",
+      alt: "Kid Watch home with curated playlist and category browse",
+    },
   },
 ];
 
@@ -49,7 +63,7 @@ export function HowItWorks() {
           return (
             <li
               key={s.title}
-              className={`relative rounded-3xl ${s.bg} p-8 ring-1 ring-black/5`}
+              className={`relative flex flex-col rounded-3xl ${s.bg} p-8 ring-1 ring-black/5`}
             >
               <span className="absolute right-6 top-6 text-sm font-medium text-ink-soft">
                 {String(i + 1).padStart(2, "0")}
@@ -59,6 +73,9 @@ export function HowItWorks() {
                 {s.title}
               </h3>
               <p className="mt-3 text-lg text-ink-soft">{s.body}</p>
+              <div className="mt-6">
+                <Screenshot src={s.shot.src} alt={s.shot.alt} />
+              </div>
             </li>
           );
         })}

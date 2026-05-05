@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Section } from "./Section";
-import { PhoneMockup } from "./PhoneMockup";
-import { Placeholder } from "./Placeholder";
+import { IpadMockup } from "./IpadMockup";
+import { Screenshot } from "./Screenshot";
 import { AppStoreBadge } from "./AppStoreBadge";
 
 export function Hero() {
@@ -31,9 +31,13 @@ export function Hero() {
           </div>
         </div>
         <div>
-          <PhoneMockup>
-            <Placeholder label="Hero screenshot" w={1320} h={2868} tone="bg-coral-soft" />
-          </PhoneMockup>
+          <IpadMockup>
+            <Screenshot
+              src="./screenshots/kid-home.png"
+              alt="VideoVault kid home screen with curated playlist and category browse"
+              className="rounded-none ring-0 shadow-none"
+            />
+          </IpadMockup>
         </div>
       </div>
     </Section>
