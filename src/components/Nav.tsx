@@ -4,6 +4,7 @@ import { APP_STORE_URL } from "../content/links";
 const links = [
   { href: "#how", label: "How" },
   { href: "#why", label: "Why" },
+  { href: "#tags", label: "Tags" },
   { href: "#setup", label: "Setup" },
   { href: "#privacy", label: "Privacy" },
 ];
