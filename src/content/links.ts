@@ -1,5 +1,5 @@
 export const APP_STORE_URL = "https://apps.apple.com/app/PLACEHOLDER";
-export const DISCORD_URL = "https://discord.gg/PLACEHOLDER";
+export const DISCORD_URL = "https://discord.gg/cn9ZkAUmT7";
 export const GITHUB_URL = "https://github.com/PeteSchuster/Video-Vault-App";
 export const PRIVACY_URL = `${GITHUB_URL}/blob/main/README.md`;
 export const YOUTUBE_TOS_URL = "https://www.youtube.com/t/terms";
