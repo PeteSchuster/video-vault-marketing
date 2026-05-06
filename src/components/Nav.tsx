@@ -27,11 +27,7 @@ export function Nav() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-coral">
-            <svg viewBox="0 0 24 24" className="h-4 w-4 fill-cream" aria-hidden="true">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </span>
+          <img src="./favicon.svg" alt="" aria-hidden="true" className="h-8 w-8" />
           <span className="text-lg font-semibold tracking-tight text-ink">VideoVault</span>
         </a>
         <div className="hidden items-center gap-8 md:flex">
