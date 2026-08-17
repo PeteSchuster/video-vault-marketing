@@ -30,21 +30,23 @@ export function Nav() {
           <img src="./favicon.svg" alt="" aria-hidden="true" className="h-8 w-8" />
           <span className="text-lg font-semibold tracking-tight text-ink">VideoVault</span>
         </a>
-        <div className="hidden items-center gap-8 md:flex">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-base text-ink-soft hover:text-ink transition-colors"
-            >
-              {l.label}
-            </a>
-          ))}
+        <div className="flex items-center gap-8">
+          <div className="hidden items-center gap-8 md:flex">
+            {links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-base text-ink-soft hover:text-ink transition-colors"
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
           <a
             href={APP_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-cream hover:bg-coral transition-colors"
+            className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-cream hover:bg-coral-deep transition-colors"
           >
             Get the app
           </a>

@@ -7,11 +7,11 @@ import {
 } from "../content/links";
 
 const links = [
-  { href: APP_STORE_URL, label: "App Store" },
-  { href: GITHUB_URL, label: "GitHub" },
-  { href: DISCORD_URL, label: "Discord" },
-  { href: PRIVACY_URL, label: "Privacy" },
-  { href: YOUTUBE_TOS_URL, label: "YouTube ToS" },
+  { href: APP_STORE_URL, label: "App Store", external: true },
+  { href: GITHUB_URL, label: "GitHub", external: true },
+  { href: DISCORD_URL, label: "Discord", external: true },
+  { href: PRIVACY_URL, label: "Privacy", external: false },
+  { href: YOUTUBE_TOS_URL, label: "YouTube ToS", external: true },
 ];
 
 export function Footer() {
@@ -24,9 +24,10 @@ export function Footer() {
             <li key={l.label}>
               <a
                 href={l.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-ink-soft hover:text-coral transition-colors"
+                {...(l.external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+                className="text-ink-soft hover:text-coral-deep transition-colors"
               >
                 {l.label}
               </a>
