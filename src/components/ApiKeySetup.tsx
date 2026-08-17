@@ -63,6 +63,13 @@ export function ApiKeySetup() {
         is isolated to your family, and your key never touches our servers (because we
         don't have any).
       </p>
+      <p className="mt-6 max-w-3xl rounded-2xl bg-teal/15 p-5 text-lg text-ink ring-1 ring-black/5 md:p-6">
+        <strong className="font-semibold">You don't need a key to try it.</strong> Tap
+        "Skip — try with sample videos" during setup and VideoVault comes preloaded with a
+        small kid-friendly library, so you can see the review queue, the tags, and the kid
+        home working first. The key is for building your <em>own</em> library — come back
+        here when you're ready.
+      </p>
 
       <ol className="mt-12 space-y-4">
         {steps.map((s, i) => (
@@ -83,7 +90,7 @@ export function ApiKeySetup() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 text-base font-medium text-coral hover:text-terracotta transition-colors"
+                  className="mt-4 inline-flex items-center gap-2 text-base font-medium text-coral-deep hover:text-ink transition-colors"
                 >
                   {s.hrefLabel}
                   <ExternalLink className="h-4 w-4" aria-hidden="true" />

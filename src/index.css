@@ -4,6 +4,9 @@
 @theme {
   --color-coral: #FF8B6B;
   --color-coral-soft: #FFE0D6;
+  /* Text-safe coral. #FF8B6B is only 2.18:1 on cream — fine as a fill,
+     unreadable as type. Use coral-deep (5.15:1) for links and hovers. */
+  --color-coral-deep: #A9502F;
   --color-teal: #5EC2B7;
   --color-butter: #F2C879;
   --color-lavender: #B496FF;

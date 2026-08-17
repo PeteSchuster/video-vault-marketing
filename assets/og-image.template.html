@@ -1,0 +1,68 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  @font-face {
+    font-family: "Inter Variable";
+    font-weight: 100 900;
+    src: url("file:///Users/peterschuster/code/video-vault-marketing/node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2") format("woff2");
+  }
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 1200px; height: 630px;
+    background: #FFF8F3;
+    font-family: "Inter Variable", system-ui, sans-serif;
+    color: #2A1F1A;
+    display: flex; flex-direction: column;
+    padding: 64px 72px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+  /* soft coral wash in the corner so the card isn't a flat rectangle */
+  .wash {
+    position: absolute; right: -180px; top: -180px;
+    width: 620px; height: 620px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,139,107,.30) 0%, rgba(255,139,107,0) 70%);
+  }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .brand svg { width: 56px; height: 56px; border-radius: 13px; }
+  .brand span { font-size: 30px; font-weight: 620; letter-spacing: -.02em; }
+  h1 {
+    margin: 52px 0 0;
+    font-size: 78px; line-height: 1.02; font-weight: 640;
+    letter-spacing: -.035em; max-width: 15ch;
+  }
+  h1 em { font-style: normal; color: #A9502F; }
+  p {
+    margin: 28px 0 0;
+    font-size: 30px; line-height: 1.4; color: #5C4F47;
+    max-width: 26ch; font-weight: 420;
+  }
+  .foot {
+    margin-top: auto;
+    display: flex; align-items: center; gap: 20px;
+    font-size: 24px; font-weight: 520; color: #2A1F1A;
+  }
+  .foot .dot { width: 6px; height: 6px; border-radius: 50%; background: #FF8B6B; }
+  .foot .muted { color: #5C4F47; font-weight: 420; }
+</style>
+<div class="wash"></div>
+
+<div class="brand">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="14" fill="#FF8B6B"/>
+    <path d="M22 30 V22 A10 10 0 0 1 42 22 V30" stroke="#2A1F1A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <rect x="16" y="28" width="32" height="24" rx="3" fill="#2A1F1A"/>
+    <path d="M27 34 L40 40 L27 46 Z" fill="#FFF8F3"/>
+  </svg>
+  <span>VideoVault</span>
+</div>
+
+<h1>A YouTube your kid <em>actually loves</em>.</h1>
+<p>You hand-pick every video. No algorithm, no ads, no rabbit holes.</p>
+
+<div class="foot">
+  <span>video-vault.app</span>
+  <span class="dot"></span>
+  <span class="muted">iPhone &amp; iPad · Free</span>
+</div>

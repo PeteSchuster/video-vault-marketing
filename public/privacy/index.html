@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://video-vault.app/privacy/" />
+    <meta name="theme-color" content="#FF8B6B" />
+    <title>Privacy Policy — VideoVault</title>
+    <meta
+      name="description"
+      content="VideoVault's privacy policy. No accounts, no servers, no analytics in the app — your library and your YouTube API key never leave your device."
+    />
+    <style>
+      :root {
+        --coral: #ff8b6b;
+        --coral-deep: #a9502f;
+        --ink: #2a1f1a;
+        --ink-soft: #5c4f47;
+        --cream: #fff8f3;
+        --rule: #e8dbd2;
+      }
+      * { box-sizing: border-box; }
+      html { background: var(--cream); }
+      body {
+        margin: 0;
+        padding: 0 1.5rem 6rem;
+        color: var(--ink);
+        background: var(--cream);
+        /* System stack on purpose: this page is static and lives outside the
+           Vite bundle, so it can't reference the hashed Inter build. */
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-size: 1.0625rem;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 44rem; margin: 0 auto; }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 1.75rem 0;
+        border-bottom: 1px solid var(--rule);
+        margin-bottom: 3rem;
+      }
+      header img { width: 2rem; height: 2rem; }
+      header a {
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        font-size: 1.125rem;
+      }
+      h1 {
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        font-weight: 600;
+        margin: 0;
+      }
+      .updated { color: var(--ink-soft); margin: 0.75rem 0 0; font-size: 0.95rem; }
+      .lede { font-size: 1.2rem; color: var(--ink-soft); margin: 1.5rem 0 0; }
+      h2 {
+        font-size: 1.35rem;
+        letter-spacing: -0.015em;
+        font-weight: 600;
+        margin: 3rem 0 0.75rem;
+      }
+      p, ul { margin: 0.85rem 0 0; }
+      ul { padding-left: 1.25rem; }
+      li { margin-top: 0.4rem; }
+      a { color: var(--coral-deep); text-underline-offset: 2px; }
+      a:focus-visible { outline: 2px solid var(--coral-deep); outline-offset: 3px; }
+      strong { font-weight: 600; }
+      .callout {
+        margin-top: 1.5rem;
+        padding: 1.25rem 1.5rem;
+        background: rgba(255, 139, 107, 0.1);
+        border-left: 4px solid var(--coral);
+        border-radius: 0 0.75rem 0.75rem 0;
+      }
+      .callout p:first-child { margin-top: 0; }
+      footer {
+        margin-top: 4rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--rule);
+        color: var(--ink-soft);
+        font-size: 0.9rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.5rem;
+      }
+      footer a { color: var(--ink-soft); }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <img src="/favicon.svg" alt="" aria-hidden="true" />
+        <a href="/">VideoVault</a>
+      </header>
+
+      <main>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated 17 August 2026 · Applies to VideoVault for iPhone and iPad, version 1.3.0.</p>
+
+        <p class="lede">
+          VideoVault has no accounts, no servers, and no analytics. There is no mechanism
+          by which we could collect your data, because there is nowhere for it to go.
+        </p>
+
+        <h2>What we collect</h2>
+        <p>
+          Nothing. We do not operate a server, an account system, or an analytics
+          service, and the app contains no third-party tracking or advertising SDKs. We
+          receive no information about you, your device, your library, or what your child
+          watches — not in aggregate, not anonymously, not at all.
+        </p>
+
+        <h2>What stays on your device</h2>
+        <p>
+          Everything the app knows lives in local storage on the device where you set it
+          up, and is included in your normal iOS device backups:
+        </p>
+        <ul>
+          <li>Your imported sources, approved and rejected videos, playlists, and tags.</li>
+          <li>
+            Your child's activity inside the app — favorites, watch history, play counts,
+            and the Up Next queue.
+          </li>
+          <li>
+            <strong>Your YouTube API key and your parent PIN</strong>, which are stored in
+            the iOS Keychain rather than ordinary app storage.
+          </li>
+        </ul>
+        <p>
+          Deleting the app removes all of it. We cannot recover any of it for you, because
+          we never had it.
+        </p>
+
+        <h2>Where data does travel: YouTube</h2>
+        <p>
+          VideoVault is a curation layer over YouTube, so using it means talking to
+          Google's services from your device:
+        </p>
+        <ul>
+          <li>
+            <strong>The YouTube Data API.</strong> When you import, search, or check a
+            source for new uploads, the app calls
+            <code>googleapis.com</code> using <em>your own</em> API key to fetch titles,
+            durations, thumbnails, and category information. Your key is sent only to
+            Google, never to us.
+          </li>
+          <li>
+            <strong>Playback.</strong> Videos play through YouTube's official embedded
+            player inside the app. As with any embedded YouTube player, Google receives
+            the requests that playback requires — including your device's IP address — and
+            may set cookies inside that player. This traffic is governed by
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>
+            and the
+            <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener noreferrer">YouTube Terms of Service</a>,
+            not by us.
+          </li>
+          <li>
+            <strong>Thumbnails</strong> are loaded from YouTube's image servers
+            (<code>ytimg.com</code>).
+          </li>
+        </ul>
+        <p>
+          VideoVault blocks navigation out of the embedded player, so a tap inside a video
+          cannot escape into the full YouTube app or website. What it cannot do is change
+          how Google's own player behaves once it's running.
+        </p>
+
+        <h2>Tips</h2>
+        <p>
+          If you leave a tip, Apple processes the purchase through the App Store. We
+          receive Apple's standard sales reports, which do not identify you. We never see
+          your payment details.
+        </p>
+
+        <h2>Sharing a library between devices</h2>
+        <p>
+          Exporting a library produces a file that you control and share yourself — by
+          AirDrop, Files, or however you like. Exports never include your API key, and
+          your child's favorites and watch history are left out unless you explicitly
+          choose to include them.
+        </p>
+
+        <h2>Children</h2>
+        <p>
+          VideoVault is designed to be used by children under a parent's curation. It
+          collects no personal information from anyone, children included, and it shows no
+          advertising of its own. It has no accounts, no comments, no messaging, and no
+          uploads.
+        </p>
+        <p>
+          One limit worth knowing about: because playback uses YouTube's own embedded
+          player, that player's controls belong to Google, not to us. Its share button can
+          open the standard iOS share sheet with a link to the video being watched, which
+          means a child could copy or send that link. We block the player from navigating
+          anywhere else, but we can't remove Google's controls from inside it.
+        </p>
+
+        <h2>This website</h2>
+        <div class="callout">
+          <p>
+            One thing worth stating plainly: <strong>video-vault.app uses Google
+            Analytics</strong> to count visits to this marketing site. That is the website
+            only. The app itself has no analytics, and nothing measured here is connected
+            to anything in the app.
+          </p>
+        </div>
+
+        <h2>Changes</h2>
+        <p>
+          If this policy changes, the updated version will be posted on this page with a
+          new date above. Substantive changes will also be noted in the app's release
+          notes.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions about privacy are welcome in the
+          <a href="https://discord.gg/cn9ZkAUmT7" target="_blank" rel="noopener noreferrer">VideoVault Discord</a>,
+          or as an issue on
+          <a href="https://github.com/PeteSchuster/Video-Vault-App" target="_blank" rel="noopener noreferrer">GitHub</a>.
+        </p>
+      </main>
+
+      <footer>
+        <span>© 2026 Pete Schuster</span>
+        <a href="/">← Back to video-vault.app</a>
+        <span>VideoVault is not affiliated with YouTube or Google.</span>
+      </footer>
+    </div>
+  </body>
+</html>
